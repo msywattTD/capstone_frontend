@@ -6,6 +6,7 @@ function TargetImage() {
 
   async function getPostInfo(postID) {
     try {
+      let res = await axios.get();
     } catch (e) {
       console.error(e);
     }

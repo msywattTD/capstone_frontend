@@ -1,9 +1,9 @@
-import ImagePreview from "./ImagePreview";
+import ImageRowPreview from "./ImageRowPreview";
 
 function MainContainer() {
   return (
     <div id="main-container">
-      <ImagePreview />
+      <ImageRowPreview />
     </div>
   );
 }
