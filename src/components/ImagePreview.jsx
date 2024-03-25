@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function ImagePreview() {
   const [images, setImages] = useState([]);
@@ -25,12 +26,14 @@ function ImagePreview() {
   const loaded = () => {
     return (
       <>
-        <div>
-          <div className="postTitle">{`${
-            images[images.length - 1].postTitle
-          }`}</div>
-          <img src={`${images[images.length - 1].filePath}`} width="240" />
-        </div>
+        <Link to={`${images}`}>
+          <div>
+            <div className="postTitle">{`${
+              images[images.length - 1].postTitle
+            }`}</div>
+            <img src={`${images[images.length - 1].filePath}`} width="240" />
+          </div>
+        </Link>
         <div>
           <div className="postTitle">{`${
             images[images.length - 2].postTitle
