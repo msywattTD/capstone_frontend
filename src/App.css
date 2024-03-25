@@ -61,9 +61,19 @@ h1 {
 
 #main-container {
   border: 2px solid yellow;
-  width: 1240px;
+  width: 1260px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+}
+
+img {
+  padding: 5px
+}
+
+.postTitle {
+  text-align: center;
+  font-size: 30px;
 }
