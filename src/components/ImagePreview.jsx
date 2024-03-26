@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import "../App.css";
 
 function ImagePreview({ image }) {
   return (
-    <Link to={`/${image.postId}`}>
-      <div>
-        <div className="postTitle">{`${image.postTitle}`}</div>
+    <div>
+      <div className="postTitle">{`${image.postTitle}`}</div>
+      <Link to={`/${image._id}`}>
         <img src={`${image.filePath}`} width="240" />
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 

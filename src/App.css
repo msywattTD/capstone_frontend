@@ -38,6 +38,7 @@ input:focus {
 
 #FaHome {
   margin-left: 10px;
+  color: white;
 }
 
 #advanced-search-link {
@@ -55,7 +56,6 @@ input:focus {
 h1 {
   text-align: center;
   font-size: 5em;
-  border: 2px pink solid;
   padding: 40px;
 }
 
@@ -70,10 +70,30 @@ h1 {
 }
 
 img {
-  padding: 5px
+  padding: 5px;
 }
 
 .postTitle {
   text-align: center;
   font-size: 30px;
+  font: black;
+  text-decoration: none;
+}
+
+
+#target-image-container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px
 }

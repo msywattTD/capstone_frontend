@@ -7,7 +7,9 @@ function NavBar() {
   return (
     <div className="nav">
       <IconContext.Provider value={{ size: "2.5em" }}>
-        <FaHome id="FaHome" />
+        <Link to="http://localhost:5173">
+          <FaHome id="FaHome" />
+        </Link>
       </IconContext.Provider>
       <SearchBar />
       <div className="navbar-link" id="advanced-search-link">
