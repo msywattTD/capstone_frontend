@@ -7,6 +7,11 @@
 .search-bar-container {
   width: 30%;
 }
+
+.navbar-link {
+  padding: 0px 10px;
+  color: white;
+}
 .input-wrapper {
   width: 100%;
   border-radius: 4px;
@@ -51,6 +56,7 @@ input:focus {
 
 .navbar-link {
   padding: 0px 10px;
+  text-decoration: none;
 }
 
 h1 {
@@ -60,7 +66,6 @@ h1 {
 }
 
 #main-container {
-  border: 2px solid yellow;
   width: 1260px;
   margin-left: auto;
   margin-right: auto;

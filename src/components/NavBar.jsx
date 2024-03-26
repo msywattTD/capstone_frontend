@@ -15,6 +15,14 @@ function NavBar() {
       <div className="navbar-link" id="advanced-search-link">
         Advanced Search
       </div>
+      <Link
+        to="http://localhost:5173/upload"
+        style={{ textDecoration: "none", color: "white" }}
+      >
+        <div className="navbar-link" id="upload-link">
+          Upload
+        </div>
+      </Link>
       <div className="navbar-link" id="account-link">
         Account
       </div>
