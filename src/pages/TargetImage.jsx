@@ -2,6 +2,7 @@ import NavBar from "../components/NavBar";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ImageTagList from "../components/ImageTagList";
 
 function TargetImage() {
   const [image, setImage] = useState({});
@@ -34,7 +35,7 @@ function TargetImage() {
           <h2>{`${image[0].postTitle}`}</h2>
           <h3>{`Posted By: ${image[0].postedBy}`}</h3>
           <img src={`${image[0].filePath}`} width="1000" />
-          <div id="tag-container"></div>
+          <ImageTagList tags={image[0].tags} />
         </div>
       </>
     );
