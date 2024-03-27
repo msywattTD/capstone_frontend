@@ -6,14 +6,27 @@ import ImageTagList from "../components/ImageTagList";
 
 function TargetImage() {
   const [image, setImage] = useState({});
+  const [poster, setPoster] = useState(null);
   let { postId } = useParams();
-  const url = `http://localhost:3000/images/${postId}`;
+  const url = `https://capstone-backend-kpc2.onrender.com/images/${postId}`;
 
   async function getPostInfo(postId) {
     try {
       let response = await axios.get(url);
       setImage(response.data);
-      console.log(image);
+    } catch (e) {
+      console.error(e);
+    }
+
+    try {
+      let response = await axios.get(
+        `https://capstone-backend-kpc2.onrender.com/users`
+      );
+      response.data.map((user) => {
+        if (image[0].postedBy === user.posterId) {
+          setPoster(user.name);
+        }
+      });
     } catch (e) {
       console.error(e);
     }
@@ -33,7 +46,7 @@ function TargetImage() {
         <NavBar />
         <div id="target-image-container">
           <h2>{`${image[0].postTitle}`}</h2>
-          <h3>{`Posted By: ${image[0].postedBy}`}</h3>
+          <h3>{`Posted By: ${poster}`}</h3>
           <img src={`${image[0].filePath}`} width="1000" />
           <ImageTagList tags={image[0].tags} />
         </div>

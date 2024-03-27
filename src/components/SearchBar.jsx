@@ -5,7 +5,7 @@ function SearchBar({ setResults }) {
   const [input, setInput] = useState("");
 
   const fetchTitles = async (value) => {
-    await fetch("http://localhost:3000/images")
+    await fetch("https://capstone-backend-kpc2.onrender.com/images")
       .then((response) => response.json())
       .then((json) => {
         const results = json.filter((post) => {

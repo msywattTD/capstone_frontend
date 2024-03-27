@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <div className="nav">
       <IconContext.Provider value={{ size: "2.5em" }}>
-        <Link to="http://localhost:5173">
+        <Link to="https://memedb.onrender.com">
           <FaHome id="FaHome" />
         </Link>
       </IconContext.Provider>
@@ -23,7 +23,7 @@ function NavBar() {
         Advanced Search
       </div>
       <Link
-        to="http://localhost:5173/upload"
+        to="https://memedb.onrender.com/upload"
         style={{ textDecoration: "none", color: "white" }}
       >
         <div className="navbar-link" id="upload-link">

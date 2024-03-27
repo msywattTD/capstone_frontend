@@ -7,7 +7,9 @@ function ImageRowPreview() {
 
   async function getImage() {
     try {
-      const response = await axios.get("http://localhost:3000/images/home");
+      const response = await axios.get(
+        "https://capstone-backend-kpc2.onrender.com/home"
+      );
       setImages(response.data);
     } catch (e) {
       console.error(e.message);

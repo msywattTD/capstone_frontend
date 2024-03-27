@@ -53,7 +53,7 @@ function UploadImage() {
       <form
         onSubmit={handleOnSubmit}
         id="upload-form"
-        // action="http://localhost:3000/imgurUpload"
+        // action="https://capstone-backend-kpc2.onrender.com/imgurUpload"
         // method="post"
         // encType="multipart/form-data"
       >
