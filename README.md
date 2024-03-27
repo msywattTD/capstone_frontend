@@ -1,8 +1,3 @@
-# React + Vite
+Backend repo: https://github.com/msywattTD/capstone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can currently use the saerch function as well as click on recently uploaded images. Uploading images yourself is currently bricked and the imgur API is not very nice. You can manually post to the DB and then add images that way, but as for now automated imgur isn't functional and I don't know if I care to fix it because the intent is to post to my own server instead of hosting through imgur. Discord bot integration inc as well
