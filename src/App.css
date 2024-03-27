@@ -37,7 +37,7 @@ input:focus {
 }
 
 #search-icon {
-  color: royalblue;
+  color: #BB86FC;
   font-size: 24px;
 }
 
@@ -110,4 +110,32 @@ h3 {
   margin-right: 8px;
   border: none;
   margin-bottom: 20px;
+}
+
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px grey solid;
+  border-radius: 12px;
+  width: 600px;
+}
+
+label {
+  color: #BB86FC;  
+  font-weight: 500;
+  font-size: 24px;
+  padding: 24px
+}
+
+#upload-input {
+  padding: 24px
+}
+
+#form-submit {
+  width: 140px;
+  height: 50px;
+  font-size: 30px;
+  margin: 24px;
 }
