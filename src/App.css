@@ -2,7 +2,7 @@
   display: flex;
   height: 60px;
   border-bottom: 2px solid black;
-  align-items: center;
+  /* align-items: center; */
 }
 .search-bar-container {
   width: 30%;
@@ -12,6 +12,7 @@
   padding: 0px 10px;
   color: white;
 }
+
 .input-wrapper {
   width: 100%;
   border-radius: 4px;
@@ -44,6 +45,7 @@ input:focus {
 #FaHome {
   margin-left: 10px;
   color: white;
+  margin-top: 10px;
 }
 
 #advanced-search-link {
@@ -138,4 +140,34 @@ label {
   height: 50px;
   font-size: 30px;
   margin: 24px;
+}
+
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.results-list {
+  background-color: #4f4f4f;
+  margin-left: 40px;
+  max-height: 300px;
+  overflow-y: scroll;
+  z-index: 9999;
+}
+
+#upload-link {
+  padding-top: 6px 
+}
+
+.search-result {
+  padding: 10px 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.search-result:hover {
+  background-color: #7e7e7e;
 }
