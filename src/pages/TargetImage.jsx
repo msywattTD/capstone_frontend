@@ -6,35 +6,42 @@ import ImageTagList from "../components/ImageTagList";
 
 function TargetImage() {
   const [image, setImage] = useState({});
-  const [poster, setPoster] = useState(null);
+  const [poster, setPoster] = useState("");
   let { postId } = useParams();
   const url = `https://capstone-backend-kpc2.onrender.com/images/${postId}`;
 
   async function getPostInfo(postId) {
-    try {
-      let response = await axios.get(url);
-      setImage(response.data);
-    } catch (e) {
-      console.error(e);
-    }
+    let userResponse = await axios.get(
+      `https://capstone-backend-kpc2.onrender.com/users`
+    );
 
-    try {
-      let response = await axios.get(
-        `https://capstone-backend-kpc2.onrender.com/users`
-      );
-      response.data.map((user) => {
-        if (image[0].postedBy === user.posterId) {
-          setPoster(user.name);
-        }
-      });
-    } catch (e) {
-      console.error(e);
-    }
+    let response = await axios.get(url);
+    setImage(response.data);
+
+    userResponse.data.map((user) => {
+      if (image[0].postedBy === user.posterId) {
+        setPoster(user.name);
+      }
+    });
+
+    //LITERAL DEMON CODE DO NOT TOUCH ANYTHING HERE WHAT IS WRONG WITH USE EFFECT
+    // try {
+    //   let response = await axios.get(
+    //     `https://capstone-backend-kpc2.onrender.com/users`
+    //   );
+    //   response.data.map((user) => {
+    //     if (image[0].postedBy === user.posterId) {
+    //       setPoster(user.name);
+    //     }
+    //   });
+    // } catch (e) {
+    //   console.error(e);
+    // }
   }
 
   useEffect(() => {
     getPostInfo();
-  }, []);
+  }, [image, poster]);
 
   const loading = () => {
     return <h3>Loading...</h3>;
